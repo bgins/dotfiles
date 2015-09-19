@@ -1,2 +1,1 @@
 alias cmpl='g++ *.cpp -o prog -std=c++11 -g'
-alias cmt='git commit -m'
