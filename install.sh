@@ -1,9 +1,13 @@
 #!/bin/bash
 
-# This is a placeholder for a scroipt to be added in the future.
+# Rename dotfiles folder
+mv ~/dot-files ~/.dotfiles
 
-# ln -sv "~/.dotfiles/dotfiles/runcom/.bash_profile" ~
-# ln -sv "~/.dotfiles/dotfiles/vim/.vimrc" ~
+# Make directory for vim files
+mkdir -p ~/.vim/colors
+
+ln -sv ~/.dotfiles/dotfiles/runcom/.bash_profile ~
+ln -sv ~/.dotfiles/dotfiles/vim/.vimrc ~
 
 # Link distinguished.vim color theme
-# ln -sv "~/.dotfiles/vim_colors/distinguished.vim" ~/.vim/colors
+ln -sv ~/.dotfiles/vim_colors/distinguished.vim ~/.vim/colors
