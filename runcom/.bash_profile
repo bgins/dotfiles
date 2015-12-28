@@ -5,5 +5,5 @@ do
 done
 unset DOTFILE
 
-# source .bashrc to be sure
-. ~/.bashrc
+# source .bashrc may be needed for interactive logins
+# source ~/.bashrc
