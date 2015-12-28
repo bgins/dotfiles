@@ -13,7 +13,8 @@ Backup the following if defaults exist: .bash_profile, .inputrc, .vimrc
 Run the install script:
 ```
 $ cd dot-files
-$ bash install.sh
+$ chmod 700 install.sh
+$ ./install.sh
 ```
 <h4>Notes</h4>
 Any aliases and environment variables set in .bashrc will override the .bash_profile assignments.
