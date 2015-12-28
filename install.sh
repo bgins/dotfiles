@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Rename dotfiles folder
-mv ~/dot-files ~/.dotfiles
+mv ~/dotfiles ~/.dotfiles
 
 # Make directory for vim files
 mkdir -p ~/.vim/colors

@@ -12,6 +12,5 @@ Backup the following if defaults exist: .bash_profile, .vimrc
 
 Run the install script:
 ```
-$ cd dotfiles
-$ source install.sh
+$ source dotfiles/install.sh
 ```
