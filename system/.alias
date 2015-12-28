@@ -1,1 +1,8 @@
-alias cmpl='g++ *.cpp -o prog -std=c++11 -g'
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+# C++
+alias c++11='g++ *.cpp -std=c++11 -g -Wall'
+alias gnu11='g++ *.cpp -std=gnu11 -g -Wall'
