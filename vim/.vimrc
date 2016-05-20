@@ -4,14 +4,15 @@ syntax on
 " use distinguished colorscheme (located in .vim/colors/)
 colorscheme distinguished
 
-" set tabs to have 4 spaces
-set tabstop=4
-
-" indent when moving to the next line while writing code
-set autoindent
+" set tabs
+" set tabstop=4
+set tabstop=4 softtabstop=4 shiftwidth=4
 
 " expand tabs into spaces
 " set expandtab
+
+" indent when moving to the next line while writing code
+set autoindent
 
 " show a cursorline highlighting
 set cursorline
