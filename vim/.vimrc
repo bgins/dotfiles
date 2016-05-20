@@ -16,3 +16,15 @@ set autoindent
 " show a cursorline highlighting
 set cursorline
 
+" Toggle line numbers between numbers, no numbers and relative numbers
+function! NumberToggle()
+	if(&relativenumber == 1)
+		set norelativenumber
+		set number
+	elseif(&number == 1)
+		set nonumber
+	else
+		set relativenumber
+	endif
+endfunc
+nnoremap <silent> <C-n> :call NumberToggle()<cr>
