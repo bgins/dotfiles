@@ -29,3 +29,7 @@ function! NumberToggle()
 	endif
 endfunc
 nnoremap <silent> <C-n> :call NumberToggle()<cr>
+
+" Enable undofile
+set undodir=~/.vim/undodir
+set undofile
