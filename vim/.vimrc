@@ -9,7 +9,7 @@ colorscheme distinguished
 set tabstop=4 softtabstop=4 shiftwidth=4
 
 " expand tabs into spaces
-" set expandtab
+set expandtab
 
 " indent when moving to the next line while writing code
 set autoindent
