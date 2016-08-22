@@ -28,17 +28,18 @@ values."
      c-c++
      emacs-lisp
      git
+     html
      javascript
-     ;; markdown
+     markdown
      ;; org
      semantic
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
      ;; spell-checking
-     ;; syntax-checking
+     syntax-checking
      themes-megapack
-     ;; version-control
+     version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
