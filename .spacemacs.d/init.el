@@ -253,6 +253,11 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  ;; can't bring in an environment variable for ORGPATH
+  ;; (setq orgpath (exec-path-from-shell-getenv(ORGPATH)))
+  ;; Set path for agenda files
+  (setq org-agenda-files (list "~/Documents/org/poms.org"
+                               "~/Documents/org/gre.org"))
   )
 
 (defun dotspacemacs/user-config ()
