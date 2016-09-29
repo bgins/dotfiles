@@ -258,7 +258,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; (setq orgpath (exec-path-from-shell-getenv(ORGPATH)))
   ;; Set path for agenda files
   (setq org-agenda-files (list "~/Documents/org/poms.org"
-                               "~/Documents/org/gre.org"))
+                               "~/Documents/org/school.org"))
   )
 
 
