@@ -31,6 +31,7 @@ values."
      erc
      git
      html
+     java
      javascript
      latex
      markdown
@@ -259,6 +260,11 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; Set path for agenda files
   (setq org-agenda-files (list "~/Documents/org/poms.org"
                                "~/Documents/org/school.org"))
+  ;; set paths for Eclipse and Eclim
+  (setq eclim-eclipse-dirs "~/Development/java-neon/eclipse"
+        eclim-executable "~/Development/java-neon/eclipse/eclim")
+
+  (setq auto-completion-enable-snippets-in-popup t)
   )
 
 
