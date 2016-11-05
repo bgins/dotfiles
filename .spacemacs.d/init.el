@@ -30,6 +30,7 @@ values."
      emoji
      erc
      git
+     haskell
      html
      java
      javascript
