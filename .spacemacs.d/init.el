@@ -267,6 +267,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
         eclim-executable "~/Development/java-neon/eclipse/eclim")
 
   (setq auto-completion-enable-snippets-in-popup t)
+  ;; user spaces instead of tabs
+  (setq indent-tabs-mode nil)
   )
 
 
