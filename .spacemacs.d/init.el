@@ -280,6 +280,9 @@ you should place your code here."
   (setq auto-completion-enable-snippets-in-popup t)
   ;; user spaces instead of tabs
   (setq indent-tabs-mode nil)
+  ;; load tidal package
+  (load-file "~/.emacs.d/private/local/tidal/tidal.el")
+  (require tidal)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
