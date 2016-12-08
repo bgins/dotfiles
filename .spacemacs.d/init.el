@@ -54,7 +54,8 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+   )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages
    '(
@@ -261,20 +262,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  ;; can't bring in an environment variable for ORGPATH
-  ;; (setq orgpath (exec-path-from-shell-getenv(ORGPATH)))
-  ;; Set path for agenda files
-  (setq org-agenda-files (list "~/Documents/org/poms.org"
-                               "~/Documents/org/school.org"))
-  ;; set paths for Eclipse and Eclim
-  (setq eclim-eclipse-dirs "~/Development/java-neon/eclipse"
-        eclim-executable "~/Development/java-neon/eclipse/eclim")
-
-  (setq auto-completion-enable-snippets-in-popup t)
-  ;; user spaces instead of tabs
-  (setq indent-tabs-mode nil)
   )
-
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -283,8 +271,15 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; Set path for agenda files
+  (setq org-agenda-files (list "~/Documents/org/sides.org"
+                               "~/Documents/org/school.org"))
   ;; full document previews for latex
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+  ;; for snippets auto-completion
+  (setq auto-completion-enable-snippets-in-popup t)
+  ;; user spaces instead of tabs
+  (setq indent-tabs-mode nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
