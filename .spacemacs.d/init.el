@@ -263,6 +263,8 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  ;; path for x86 instruction lookup
+  (setq x86-lookup-pdf "~/Documents/cs333/325462-sdm-vol-1-2abcd-3abcd.pdf")
   )
 
 (defun dotspacemacs/user-config ()
