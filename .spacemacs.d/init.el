@@ -265,10 +265,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   ;; path for x86 instruction lookup
   (setq x86-lookup-pdf "~/Documents/cs333/325462-sdm-vol-1-2abcd-3abcd.pdf")
-  ;; kbd macro for expanded tab
-  (fset 'spacetab
-        "    ")
-  (global-set-key (kbd "<C-tab>") 'spacetab)
+  ;; insert expanded tab
+  (global-set-key (kbd "<C-tab>") 'move-to-tab-stop)
   )
 
 (defun dotspacemacs/user-config ()
