@@ -36,7 +36,7 @@ values."
      java
      javascript
      latex
-     markdown
+     (markdown :variables markdown-live-preview-engine 'vmd)
      org
      python
      ranger
