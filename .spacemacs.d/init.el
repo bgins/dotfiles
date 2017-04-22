@@ -27,6 +27,7 @@ values."
      auto-completion
      ;; better-defaults
      c-c++
+     elm
      emacs-lisp
      emoji
      erc
@@ -267,6 +268,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq x86-lookup-pdf "~/Documents/cs333/325462-sdm-vol-1-2abcd-3abcd.pdf")
   ;; insert expanded tab
   (global-set-key (kbd "<C-tab>") 'move-to-tab-stop)
+  ;; set indents
+  (user-indents)
   )
 
 (defun dotspacemacs/user-config ()
@@ -290,6 +293,15 @@ you should place your code here."
   (require tidal)
   )
 
+(defun user-indents
+  ;; web development
+  (setq javascript-indent-level 2)
+  (setq js2-basic-offset 2)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq css-indent-offset 2)
+  )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables
@@ -298,11 +310,13 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "-n256")))
- '(paradox-github-token t))
+ '(paradox-github-token t)
+ '(standard-indent 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:foreground "#f8f8f8" :background "#26292c"))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
