@@ -279,9 +279,12 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  ;; Set path for agenda files
+  ;; set path for org-agenda files
   (setq org-agenda-files (list "~/Documents/org/sides.org"
                                "~/Documents/org/school.org"))
+  ;; display pomodoro count in org-agenda
+  (setq org-agenda-clockreport-parameter-plist
+        '(:fileskip0 t :link t :maxlevel 2 :formula "$5=($3+$4)*(60/25);t"))
   ;; full document previews for latex
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
   ;; for snippets auto-completion
