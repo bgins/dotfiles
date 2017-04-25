@@ -24,8 +24,10 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      asm
-     auto-completion
-     ;; better-defaults
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-help-tooltip t)
+     better-defaults
      c-c++
      elm
      emacs-lisp
@@ -46,7 +48,8 @@ values."
             shell-default-height 30
             shell-default-position 'bottom)
      spell-checking
-     syntax-checking
+     (syntax-checking :variables
+                      syntax-checking-enable-tooltips nil)
      themes-megapack
      version-control
      xkcd
@@ -257,6 +260,16 @@ values."
    dotspacemacs-whitespace-cleanup nil
    ))
 
+(defun my-setup-indent (n)
+  ;; web development
+  (setq javascript-indent-level n)
+  (setq js2-basic-offset n)
+  (setq web-mode-markup-indent-offset n)
+  (setq web-mode-css-indent-offset n)
+  (setq web-mode-code-indent-offset n)
+  (setq css-indent-offset n)
+  )
+
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
@@ -269,7 +282,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; insert expanded tab
   (global-set-key (kbd "<C-tab>") 'move-to-tab-stop)
   ;; set indents
-  (user-indents)
+  (my-setup-indent 2)
   )
 
 (defun dotspacemacs/user-config ()
@@ -287,24 +300,20 @@ you should place your code here."
         '(:fileskip0 t :link t :maxlevel 2 :formula "$5=($3+$4)*(60/25);t"))
   ;; full document previews for latex
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
-  ;; for snippets auto-completion
+  ;; for auto-completion and help
   (setq auto-completion-enable-snippets-in-popup t)
+  (setq auto-completion-enable-help-tooltip t)
   ;; user spaces instead of tabs
   (setq indent-tabs-mode nil)
+  ;; add company-elm
+  (with-eval-after-load 'company
+    (add-to-list 'company-backends 'company-elm))
   ;; load tidal package
   (load-file "~/.emacs.d/private/local/tidal/tidal.el")
   (require tidal)
   )
 
-(defun user-indents
-  ;; web development
-  (setq javascript-indent-level 2)
-  (setq js2-basic-offset 2)
-  (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2)
-  (setq css-indent-offset 2)
-  )
+
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables
