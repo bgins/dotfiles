@@ -29,7 +29,7 @@ values."
                       auto-completion-enable-help-tooltip t)
      better-defaults
      c-c++
-     elm
+     (elm :variables elm-format-on-save t)
      emacs-lisp
      emoji
      erc
