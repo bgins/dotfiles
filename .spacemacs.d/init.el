@@ -43,6 +43,7 @@ values."
      org
      python
      ranger
+     scala
      semantic
      (shell :variables
             shell-default-height 30
