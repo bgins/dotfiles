@@ -43,7 +43,9 @@ values."
      org
      python
      ranger
-     scala
+     (scala :variables
+            scala-use-unicode-arrows t
+            scala-auto-start-ensime t)
      semantic
      (shell :variables
             shell-default-height 30
@@ -301,6 +303,8 @@ you should place your code here."
   ;; add company-elm
   (with-eval-after-load 'company
     (add-to-list 'company-backends 'company-elm))
+  ;; add scala flycheck
+  (setq flycheck-scalastylerc "~/.local/bin/scalastyle-jar/scalastyle_config.xml")
   ;; load tidal package
   (load-file "~/.emacs.d/private/local/tidal/tidal.el")
   (require tidal)
