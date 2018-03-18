@@ -29,6 +29,7 @@ values."
                       auto-completion-enable-help-tooltip t)
      better-defaults
      c-c++
+     elixir
      (elm :variables elm-format-on-save t)
      emacs-lisp
      emoji
@@ -54,6 +55,7 @@ values."
      (syntax-checking :variables
                       syntax-checking-enable-tooltips nil)
      themes-megapack
+     typescript
      version-control
      xkcd
      yaml
@@ -121,7 +123,9 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(sanityinc-tomorrow-night
+   dotspacemacs-themes '(spacemacs-light
+                         sanityinc-tomorrow-night
+                         soft-stone
                          flatland)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -306,8 +310,10 @@ you should place your code here."
   ;; add scala flycheck
   (setq flycheck-scalastylerc "~/.local/bin/scalastyle-jar/scalastyle_config.xml")
   ;; load tidal package
-  (load-file "~/.emacs.d/private/local/tidal/tidal.el")
-  (require tidal)
+  ;; (load-file "~/.emacs.d/private/local/tidal/tidal.el")
+  ;; (require tidal)
+  ;; source node binaries
+  ;; (add-to-list 'exec-path "~/.nvm/versions/node/v9.2.0/bin")
   )
 
 
@@ -326,6 +332,6 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:foreground "#f8f8f8" :background "#26292c"))))
+ ;; '(default ((t (:foreground "#f8f8f8" :background "#26292c"))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
