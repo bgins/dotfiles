@@ -1,16 +1,13 @@
 # dotfiles
 
-These are my dotfiles. They are a work in progress.
+These are my dotfiles. They are a work in progress, and they probably always will be!
 
-<h4>Installation</h4>
-Clone the repository:
-```
-$ git clone https://github.com/thuselem/dotfiles.git
-```
+## Installation
 
-Backup the following if defaults exist: .bash_profile, .vimrc
+Backup the following if they exist: `.bash_profile`, `.vimrc`, `.spacemacs.d`, `.doom.d`
 
 Run the install script:
+
 ```
-$ source dotfiles/install.sh
+. dotfiles/install.sh
 ```
